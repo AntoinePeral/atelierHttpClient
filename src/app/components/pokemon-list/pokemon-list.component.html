@@ -1,0 +1,22 @@
+@for(pokemon of pokemonList; track pokemon.id){
+  <div class="pokemon-card">
+    <div class="pokemon-header">
+      <h2 class="pokemon-name">{{pokemon.name}}</h2>
+      <span class="pokemon-hp">{{pokemon.hp}}</span>
+    </div>
+    <div class="pokemon-img">
+      <img [src]="pokemon.images.small" alt="">
+    </div>
+    <div class="pokemon-body">
+      <p class="pokemon-flavor-text">
+       {{pokemon.flavorText}}
+      </p>
+      <div class="pokemon-details">
+        <p><strong>Supertype:</strong> {{pokemon.supertype}}</p>
+        <p><strong>Evolves From:</strong> {{pokemon.evolesFrom}}</p>
+        <p><strong>Rarity:</strong> {{pokemon.rarity}}</p>
+        <p><strong>Artist:</strong> {{pokemon.artist}}</p>
+      </div>
+    </div>
+  </div>
+}
